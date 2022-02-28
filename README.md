@@ -1,8 +1,8 @@
 # Informatika 2 tantárgy - személyes repository
 
-- Név: 
-- Neptun kód: 
-- Neptun szerinti kurzus (pl. L1): 
+- Név: Baráth László
+- Neptun kód: Q6KTPF
+- Neptun szerinti kurzus (pl. L1): L12iMsc
 
 A laborok megoldásait a megfelelő alkönyvtárakba készítsd el. Ha szöveges (nem forráskód) választ is kell írni, azokat a README.md-be írd be a könyvtáron belül. A labor elején ne felejtsd el új git ágat létrehozni, mert a végén a pull requestet úgy tudod létrehozni, ha azt az új ágat hasonlítod össze a master ággal. Így fognak a különbségben pont a labor megoldásaid megjelenni.
 
