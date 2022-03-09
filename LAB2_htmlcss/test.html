@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Egyszerű híroldal -HTML, CSS gyakorlat</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="keret">   
+            <div id="fejlec">
+                <h1>
+                    Random hírek minden napra.
+                </h1>
+            </div>
+            <div id="tartalom">
+                <div class="cikk">
+                    <a href="https://hackaday.com/2022/03/07/a-chip-to-address-the-fundamental-usb-3-0-deficiency/"><h2>A CHIP TO BRIDGE THE USB 2 - USB 3 DIVIDE</h2></a>
+                    <table border="1">
+                        <tr>
+                            <th />
+                            <th>Izé</th>
+                            <th>Valami</th>
+                        </tr>
+
+                        <tr>
+                            <th>Ez szívás</th>
+                            <td>Kenyér</td>
+                            <td>Pohár</td>
+                        </tr>
+                        <tr>
+                            <th>Ez még nagyobb</th>
+                            <td>Kiskancsó</td>
+                            <td>Nagykancsó</td>
+                        </tr>
+                    </table>
+                    <p>
+                        On Twitter, [whitequark] has  found and highlighted an intriguing design - a breakout board for the VL670, accompanied by an extensive yet very easy to digest write-up about its usefulness and inner workings. The VL670 is a chip that addresses a surprising problem - converting USB 2.0 signals into USB 3.0.
+                    </p>
+                    <img src="chip.jpg" alt="kép valami random áramkörről, tippre arról amiről a cikk szól de manapság nem lehessen tudni" style="width: 80%; margin: auto;">
+                    <p>
+                        If you have a USB 2.0 device and a host with only USB 3.0 signals available, this chip is for you. It might be puzzling - why is this even needed? It's about the little-known dark secret of USB3, that anyone can deduce if they ever have to deal with a 9-pin USB 3.0 connector where one of the three differential pairs doesn't quite make contact.
+                    </p>
+                </div>
+                <div class="cikk">
+                    <h2>HA-DX rádióamatőr verseny 2022</h2>
+                    <p>
+                        A Magyar Rádióamatőr Szövetség idén is megrendezte a HA-DX versenyt, melyet minden év január harmadik teljes hétvégéjén tartanak 24 órás időintervallumban. Az idei évben 15-e szombat 12:00 UTC és 16-a vasárnap 11:59 UTC között volt kihirdetve. A versennyel az egész világ rádióamatőreit invitálják QSO-kra, melynek során egyik fontos cél a hazai rádióamatőrök tevékenységének népszerűsítése.
+                    </p>
+                </div>
+                <div class="cikk">
+                    <h2>
+                        ÚJABB FORRADALMI MEGMOZDULÁS PARAGUAYBAN
+                    </h2>
+                    <p>
+                        A zsoldjukat követelő paraguayi légierők egy ejtőernyős zászlóaljat dobtak le az elnöki palota kertjébe. Sikerült is rövid lövöldözés után elkergetni Aurelio Lapaz amerikabarát, jobboldali beállítottságú elnököt, aki alig háromnegyed órát töltött hivatalában. Az új elnök a haladó gondolkozású Lopez Burillo, akinek győzelmét Asuncion lakossága fáklyás menettel ünnepli, mely lapunk zártakor még tart.
+                    </p>
+                    <img src="http://m.cdn.blog.hu/gr/greenr/image/idokep/kep17.php.png" alt="Valami kép amire azt mondták kötelező belerakni. Valami izé van rajda, de az is lehet hogy sörbontó">
+                </div>
+            </div>
+            <div id="jobbmenu">
+                <div class="modul">
+                    <h2>Keresődés</h2>
+                    <form method="POST">
+                        <input type="text" />
+                        <br>
+                        <input type="submit" value="🔎" />
+                    </form>
+                </div>
+            </div>
+            <br style="clear:both">
+        </div> 
+    </body>
+</html>
