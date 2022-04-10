@@ -1,0 +1,9 @@
+services:
+    db:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: let_me_in
+            MYSQL_USER: access_denied
+            MYSQL_PASSWORD: i_am_root
+        ports:
+            - 33060:3306
