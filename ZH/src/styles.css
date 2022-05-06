@@ -1,0 +1,4 @@
+table tr:nth-child(odd) {
+    /* FYI itt is meg lehet csinálni minden 3. 4. 5. stb sor kijelölését. https://www.w3schools.com/cssref/sel_nth-child.asp*/
+    background-color: lightgreen;
+}

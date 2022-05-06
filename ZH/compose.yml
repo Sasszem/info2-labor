@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - $PWD/src:/app
+            - $PWD/env/nginx:/etc/nginx/conf.d/
+    php:
+        build: $PWD/env/PHP
+        volumes:
+            - $PWD/src:/app
+        environment:
+            db_host: db
+            db_user: root
+            db_password: i_am_root_let_me_in
+            db_db: ZH
+    db:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: i_am_root_let_me_in
+        ports:
+            - 33060:3306
