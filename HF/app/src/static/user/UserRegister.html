@@ -1,0 +1,27 @@
+<form class="card mt-3" action="/user/register" method="POST">
+    <div class="card-header">
+        Register
+    </div>
+    <div class="card-body">
+        <h2>Register as a HAM</h2>
+        <p>
+            Here you can register as a HAM in out database. This will allow you to log QSOs, send and receive QSLs, and to change the theme of this website from this eye-bleeding light to something nicer. All you have to do is to fill out this form bellow and click 'register'!
+        </p>
+        <div class="mb-3">
+          <label for="callsignInput" class="form-label">Callsign</label>
+          <input type="text" class="form-control" id="callsignInput" aria-describedby="callsignHelp" name="callsign" pattern="([A-Za-z0-9]{1,3}[0-9][A-Za-z]{1,5})" required>
+          <div id="callsignHelp" class="form-text">Your HAM callsign</div>
+        </div>
+        <div class="mb-3">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" name="email" required>
+          <div id="emailHelp" class="form-text">Email (will not be public)</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" name="password" required>
+            <div id="passwordHelp" class="form-text">Choose a good password. Don't worry, we won't store it as plaintext!</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>

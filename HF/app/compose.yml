@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+    web:
+        image: nginx:latest
+        ports:
+            - "8080:80"
+        volumes:
+            - $PWD/src:/app
+            - $PWD/env/nginx:/etc/nginx/conf.d/
+    php:
+        build: $PWD/env/PHP
+        volumes:
+            - $PWD/src:/app
+            - images:/images/
+        environment:
+            db_host: db
+            db_user: access_denied
+            db_password: i_am_root
+            db_db: HAM
+            uploads_dir: /images/
+            DEBUG_MODE: 1
+    db:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD: let_me_in
+            MYSQL_USER: access_denied
+            MYSQL_PASSWORD: i_am_root
+            TZ: UTC
+        ports:
+            - 33060:3306
+volumes:
+    images:

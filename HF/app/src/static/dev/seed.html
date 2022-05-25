@@ -1,0 +1,23 @@
+<form class="card mt-1" action="/dev/seed" method="POST">
+    <div class="card-header">
+        Database seeding
+    </div>
+    <div class="card-body">
+        Here you can generate large amounts of fake data in the database for testing. <br><b>DO NOT EVER DO THIS IN PRODUCTION, OR YOUR BOSS WILL BE LEGALLY OBLIGATED TO KICK YOU IN THE ASS!</b>
+        <div class="mb-3">
+            <label for="usersInput" class="form-label">Users:</label>
+            <input type="number" class="form-control" id="usersInput" aria-describedby="usersHelp" name="users">
+            <div id="usersHelp" class="form-text">Users (HAMs) to generate. Generated users will all have the prefix 'GEN' (not an existing prefix), password 'GENERATED' and placeholder email.</div>
+        </div>
+        <div class="mb-3">
+            <label for="qsoInput" class="form-label">QSOs:</label>
+            <input type="number" class="form-control" id="qsoInput" aria-describedby="qsoHelp" name="qsos">
+            <div id="qsoHelp" class="form-text">QSOs to generate. Generated qsos will have a 50% chance of being between users. QSOs will be generated after users, so new users might have QSOs</div>
+        </div>
+        <div class="form-check form-switch mb-3">
+            <input type="checkbox" class="form-check-input" id="customSwitch1" required>
+            <label class="form-check-label" for="customSwitch1">I understand that this feature is only for dev purposes and should never be done on live servers, but I still want to proceed</label>
+        </div>
+        <button type="submit" class="btn btn-success">Seed</button>
+    </div>
+</form>

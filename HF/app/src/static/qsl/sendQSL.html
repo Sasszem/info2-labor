@@ -1,0 +1,31 @@
+<form class="card mt-3 needs-validation" action="/qsl/new" enctype="multipart/form-data" method="POST">
+    <div class="card-header">
+        Send QSL
+    </div>
+    <div class="card-body">
+        <h2>Send QSL to %CALLSIGN%</h2>
+        <p>
+            Here you can send an image (QSL) to the %CALLSIGN%, because you had a QSO at %DATE%.
+        </p>
+        <input type="hidden" class="form-control" id="qsoIDInput" aria-describedby="qsoIDInputHelp" name="qsoid" value="%QSOID%" required>
+        <div class="mb-3 ">
+            <label for="fileInput" class="form-label">Image to send</label>
+            <input type="file" class="form-control" id="fileInput" aria-describedby="fileHelp" name="imageFile" accept="image/*" required>
+            <div id="fileHelp" class="form-text">Image to send</div>
+            <div class="invalid-feedback">
+                Image must be &lt;60k in size!
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+</form>
+<script>
+const uploadField = document.getElementById("fileInput");
+uploadField.onchange = function() {
+    if(this.files[0].size > 60000){
+        this.classList.add('is-invalid');
+    } else {
+        this.classList.remove("is-invalid");
+    }
+};
+</script>

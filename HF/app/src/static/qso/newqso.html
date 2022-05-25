@@ -1,0 +1,53 @@
+<form class="card mt-3" action="/qso/new" method="POST">
+    <div class="card-header">
+        Add new QSO
+    </div>
+    <div class="card-body">
+        <h2>Log new QSO</h2>
+        <p>
+            Add a new QSO to the database.
+        </p>
+        <div class="mb-3">
+            <label for="callsignInput" class="form-label">Callsign</label>
+            <input type="text" class="form-control" id="callsignInput" aria-describedby="callsignHelp" name="callsign" pattern="([A-Za-z0-9]{1,3}/)?([A-Za-z0-9]{1,3}[0-9][A-Za-z]{1,5})(/[A-Za-z0-9]{1,3})?" required>
+            <div id="callsignHelp" class="form-text">The callsign you have used</div>
+        </div>
+        <div class="mb-3">
+            <label for="callsign2Input" class="form-label">Callsign #2</label>
+            <input type="text" class="form-control" id="callsign2Input" aria-describedby="callsign2Help" name="callsign2" pattern="([A-Za-z0-9]{1,3}/)?([A-Za-z0-9]{1,3}[0-9][A-Za-z]{1,5})(/[A-Za-z0-9]{1,3})?" required>
+            <div id="callsign2Help" class="form-text">The callsign of the other end of the QSO</div>
+        </div>
+        <div class="mb-3">
+            <label for="dateInput" class="form-label">Date & time (UTC)</label>
+            <input type="datetime-local" class="form-control" id="dateInput" aria-describedby="dateHelp" name="date" required>
+            <div id="dateHelp" class="form-text">Date and time of the start of the QSO. <b>Use UTC</b></div>
+        </div>
+        <div class="mb-3">
+            <label for="freqInput" class="form-label">Frequency used</label>
+            <input type="text" class="form-control" id="freqInput" aria-describedby="freqHelp" name="freq" pattern="([0-9]\s?)+(\.([0-9]\s?)*)?\s?([kKmM])?([hH][zZ])?" required>
+            <div id="freqHelp" class="form-text">You can use "k", "M", "kHz" or "MHz" (case-insensitive) suffixes.</div>
+        </div>
+        <div class="mb-3">
+            <label for="modeInput" class="form-label">Mode</label>
+            <select class="form-select" id="modeInput" name="mode">
+            <option value="CW">CW</option>
+            <option value="DSB">AM-DSB</option>
+            <option value="LSB">LSB</option>
+            <option value="USB">USB</option>
+            <option value="NFM">NBFM</option>
+            <option value="RTTY">RTTY</option>
+        </select>
+        </div>
+        <div class="mb-3">
+            <label for="reportInput" class="form-label">Received report</label>
+            <input type="number" class="form-control" id="reportInput" aria-describedby="reportHelp" name="report" required>
+            <div id="reportHelp" class="form-text">Report received by you</div>
+        </div>
+        <div class="mb-3">
+            <label for="report2Input" class="form-label">Transmitted report</label>
+            <input type="number" class="form-control" id="report2Input" aria-describedby="report2Help" name="report2" required>
+            <div id="report2Help" class="form-text">Report received by the other HAM</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>

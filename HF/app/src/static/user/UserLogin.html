@@ -1,0 +1,18 @@
+<form class="card mt-3" action="/user/login" method="POST">
+    <div class="card-header">
+        Login
+    </div>
+    <div class="card-body">
+        <h2>Log in to your account</h2>
+        <div class="mb-3">
+          <label for="callsignInput" class="form-label">Callsign</label>
+          <input type="text" class="form-control" id="callsignInput" aria-describedby="callsignHelp" name="callsign" required>
+          <div id="callsignHelp" class="form-text">Your HAM callsign</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="passwordInput">Password</label>
+            <input type="password" class="form-control" id="passwordInput" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-success">Login</button>
+    </div>
+</form>
